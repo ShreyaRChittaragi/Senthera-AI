@@ -1,0 +1,86 @@
+/* ========== THEME VARIABLES ========== */
+:root {
+  --bg: #f5f7fa;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --text: #1d1d1d;
+  --border: rgba(0, 0, 0, 0.08);
+  --nav-bg: #ffffff;
+  --brand-gradient: linear-gradient(90deg, #7a00ff, #007bff);
+}
+
+body[data-theme="dark"] {
+  --bg: #0d0f15;
+  --card-bg: rgba(255, 255, 255, 0.10);
+  --text: #e6e6e6;
+  --border: rgba(255, 255, 255, 0.12);
+  --nav-bg: linear-gradient(90deg, #0d0f15, #1a1f2c);
+  --brand-gradient: linear-gradient(90deg, #ff82ff, #7ab2ff);
+}
+
+/* ========== GLOBAL ========== */
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Card styling */
+.senthera-card,
+.senthera-home-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 35px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ========== NAVBAR ========== */
+.senthera-nav {
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+}
+
+.senthera-logo {
+  background: var(--brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  color: var(--text) !important;
+  transition: 0.25s;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
+
+.nav-glow::after {
+  background: var(--brand-gradient);
+}
+
+/* Theme Switch Button */
+.theme-toggle-btn {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.05);
+  background: var(--brand-gradient);
+  color: #fff;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
