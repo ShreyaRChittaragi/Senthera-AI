@@ -1,235 +1,193 @@
-🌟 Senthera – Multimodal Mental Wellness AI Assistant
-Mini Project – Artificial Intelligence and Machine Learning
+# 🌟 Senthera – Multimodal Mental Wellness AI Assistant
 
-Jawaharlal Nehru National College of Engineering (JNNCE)
-Shimoga – 577201
+> An advanced AI system that understands human emotions through  
+> **text**, **voice**, and **facial expressions** — and responds with empathy using **Gemini 2.5 Flash**.  
+> Built with **Flask + React + Multimodal ML Models**, Senthera is designed to support mental wellness through natural, real-time interaction.
 
-👨‍💻 Team Members
+---
 
-Shreya R Chittaragi
+## 💡 What Senthera Can Do
 
-Devika N D
+- 🧠 Understand emotions from **text messages**  
+- 🎤 Detect tone-based emotions from **voice**  
+- 🖼️ Recognize facial expressions from **images/video**  
+- 🔄 Fuse text × voice emotions for **high accuracy**  
+- 🤖 Generate warm, supportive responses using **Gemini**  
+- 🔐 Login using **Google OAuth**  
+- ⚡ Real-time **voice streaming** + transcription  
+- 🎛️ Integrated **React frontend + Flask backend**  
 
-Jagadeesh R S
+---
 
-🎓 Guide
+## 🧩 Multimodal Features
 
-Dr. Chetan K R
-Department of CSE, JNNCE, Shimoga
+### ❤️ Text Emotion Recognition
+- Powered by **DistilBERT emotion classifier**
+- Identifies joy, sadness, anger, fear, love, surprise
 
-🧠 Project Overview
+### 🔊 Voice Emotion Recognition
+- Uses **Wav2Vec2 Speech Emotion Model**
+- Detects stress, energy, excitement, anger & calmness
 
-Senthera is an intelligent multimodal mental wellness assistant capable of understanding human emotions through:
+### 🗣️ Speech-to-Text (Whisper)
+- Faster-Whisper for real-time audio transcription
+- Silence detection for efficient processing
 
-Text
+### 😊 Face Emotion Recognition
+- Vision Transformer (ViT) model
+- Works with single images or live webcam input
 
-Voice
+### 🔥 Multimodal Emotion Fusion
+> Because words show *meaning*  
+> and tone shows *feeling*  
+Senthera combines both for a more accurate emotional understanding.
 
-Video (facial expressions)
+---
 
-It uses state-of-the-art AI models for:
+## 🛠️ Tech Stack
 
-Speech-to-text (Whisper)
+### Backend (Flask)
+- Python  
+- Flask / Flask-Session  
+- Whisper / Faster-Whisper  
+- HuggingFace Transformers  
+- Wav2Vec2  
+- ViT Face Emotion Model  
+- Google Gemini 2.5 Flash  
+- SQLite  
+- OAuth2Session  
 
-Emotion detection from text (DistilBERT)
+### Frontend (React)
+- React.js  
+- JavaScript  
+- HTML / CSS  
+- Webcam API  
+- Fetch API  
 
-Emotion detection from voice (Wav2Vec2)
+---
 
-Face emotion detection (Vision Transformer)
+## 📁 Project Structure
 
-Conversation generation (Gemini 2.5 Flash)
-
-Senthera provides warm, empathetic, real-time responses and supports natural communication.
-
-🚀 Key Features
-🔹 1. Text Emotion Analysis
-
-Uses DistilBERT-based emotion classifier
-
-Detects joy, sadness, anger, love, fear, and more
-
-🔹 2. Voice Emotion Analysis
-
-Wav2Vec2 Speech Emotion Recognition
-
-Detects tone, stress, energy, excitement
-
-🔹 3. Whisper / Faster-Whisper Speech-to-Text
-
-Live streaming transcription
-
-Silence detection
-
-Handles background noise
-
-🔹 4. Face Emotion Recognition
-
-ViT model for detecting facial expressions
-
-Works with images and video streams
-
-🔹 5. Multimodal Emotion Fusion
-
-Combines text emotion × voice emotion
-to get the most accurate emotional state
-
-🔹 6. Gemini-based Response Generation
-
-Gemini 2.5 Flash
-
-Empathetic tone
-
-Context-aware conversation
-
-🔹 7. Google OAuth Login
-
-Secure authentication
-
-Session memory
-
-No password stored locally
-
-🔹 8. Full Frontend + Backend Integration
-
-Flask backend
-
-React.js frontend
-
-Real-time communication
-
-📁 Project Structure
+```plaintext
 senthera/
 │
 ├── Senthera-backend/
 │   ├── app.py
 │   ├── gemini_models.py
 │   ├── requirements.txt
-│   ├── README.md
 │   └── .gitignore
 │
 └── Senthera-frontend/
     ├── public/
     ├── src/
     ├── package.json
-    ├── package-lock.json
-    ├── README.md
     └── .gitignore
+```
 
-🛠 Backend Setup (Flask)
-1️⃣ Create virtual environment
+---
+
+## 🚀 How to Run – Backend (Flask)
+
+1️⃣ **Create virtual environment**
+
+```bash
 python -m venv .venv
+```
 
-2️⃣ Activate environment
+2️⃣ **Activate it (Windows)**
 
-Windows:
-
+```bash
 .venv\Scripts\activate
+```
 
-3️⃣ Install dependencies
+3️⃣ **Install dependencies**
+
+```bash
 pip install -r requirements.txt
+```
 
-4️⃣ Create .env file
+4️⃣ **Create `.env`**
+
+```env
 FLASK_SECRET=your_secret_key
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
-GEMINI_API_KEY=your_gemini_api_key
+GEMINI_API_KEY=your_gemini_key
+```
 
-5️⃣ Run backend
+5️⃣ **Run server**
+
+```bash
 python app.py
+```
 
-🖥️ Frontend Setup (React)
-1️⃣ Install dependencies
+---
+
+## ⚡ How to Run – Frontend (React)
+
+1️⃣ Install dependencies:
+
+```bash
 npm install
+```
 
-2️⃣ Start development server
+2️⃣ Start server:
+
+```bash
 npm start
+```
 
+Frontend opens at:
 
-Frontend URL:
-
+```
 http://localhost:3000/
+```
 
-🧩 Environment Variables
-Variable	Description
-FLASK_SECRET	Flask app secret key
-GOOGLE_CLIENT_ID	Google OAuth client ID
-GOOGLE_CLIENT_SECRET	Google OAuth client secret
-GEMINI_API_KEY	Gemini model API key
+---
 
-⚠️ Note: .env should NOT be uploaded to GitHub
-(Already ignored via .gitignore)
+## 🎓 Project Team
 
-🧰 Tech Stack
-Backend
+### 👩‍💻 Developed By
+- **Shreya R Chittaragi**  
+- **Devika N D**  
+- **Jagadeesh R S**
 
-Python
+### 👨‍🏫 Guide
+**Dr. Chetan K R**  
+Department of Computer Science & Engineering  
+Jawaharlal Nehru National College of Engineering (JNNCE)  
+Shimoga – 577201
 
-Flask
+---
 
-Whisper / Faster-Whisper
+## 📘 About Senthera
 
-HuggingFace Transformers
+> “An AI that listens like a friend,  
+> understands like a human,  
+> and responds with empathy.”
 
-Wav2Vec2 SER
+Senthera’s mission is to support mental wellness using modern AI technologies and multimodal understanding.
 
-ViT Face Emotion Model
+---
 
-Google Gemini 2.5 Flash
+## 🔮 Future Enhancements
 
-SQLite
+- 📊 Emotion graphing (timeline)  
+- 📱 Mobile app version  
+- 🤝 Combined text + voice + face fusion  
+- 🔐 JWT Authentication  
+- ☁️ Full deployment (Render / Railway / Vercel)  
+- 🧠 User mood history & analytics  
 
-OAuth2
+---
 
-Frontend
+## ⚖️ License
 
-React.js
+This project is licensed under the **MIT License**.
 
-JavaScript
+---
 
-HTML/CSS
+## ⭐ Support the Project
 
-Webcam API
-
-Fetch API
-
-🎯 Project Objectives
-
-Build an emotionally-aware AI assistant
-
-Perform multimodal emotion recognition
-
-Support mental wellness through empathetic dialogue
-
-Provide real-time text, voice, and video analysis
-
-Create a user-friendly full-stack application
-
-🚧 Future Enhancements
-
-Combined face + voice + text emotion fusion
-
-Real-time emotion graphs
-
-Authentication with JWT
-
-Mobile app (React Native / Flutter)
-
-Full deployment (Render, Railway, Vercel)
-
-Long-term mood tracking
-
-⚖️ License
-
-MIT License
-Recommended for academic projects & open-source contributions.
-
-👨‍🏫 Developed Under the Guidance Of
-
-Dr. Chetan K R
-Department of Computer Science & Engineering
-JNNCE, Shimoga – 577201
-
-❤️ Developed By
-Shreya R Chittaragi
-Devika N D
-Jagadeesh R S
+If you like this project, drop a ⭐ on GitHub!  
+It motivates us to build even better versions 💛
