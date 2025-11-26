@@ -1,0 +1,14 @@
+flask
+flask-cors
+flask-session
+requests-oauthlib
+python-dotenv
+google-generativeai
+transformers
+torch
+librosa
+soundfile
+faster-whisper
+opencv-python
+pillow
+numpy
